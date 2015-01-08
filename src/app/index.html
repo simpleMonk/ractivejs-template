@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ractive gulp template</title>
+    <link rel="stylesheet" type="text/css" href="app.css" media="all"/>
+
+
+    <script src="./bundle.js"></script>
+    <script id='template' type='text/ractive'>
+    <ul class='menu'>
+        <li on-click='set("selected","home")'
+            class='{{#if selected === "home"}}selected{{/if}}'>Home</li>
+
+        <li on-click='set("selected","account")'
+            class='{{#if selected === "account"}}selected{{/if}}'>Your account</li>
+
+        <li on-click='set("selected","faq")'
+            class='{{#if selected === "faq"}}selected{{/if}}'>FAQs</li>
+
+        <li on-click='set("selected","about")'
+            class='{{#if selected === "about"}}selected{{/if}}'>About</li>
+    </ul>
+
+    <p>selected: {{selected}}</p>
+
+    </script>
+
+</head>
+<body>
+<div>Hello World!</div>
+<main></main>
+</body>
+</html>
